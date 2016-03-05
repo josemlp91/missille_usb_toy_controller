@@ -1,0 +1,52 @@
+<ion-view view-title="Missil Control">
+  <ion-content class="padding">
+  <br>
+  <div class="row">
+    <div class="col col-33"></div>
+
+      <button ng-click="up()" class="button button-dark pulse col col-33"><img class="icon-pulse"  ng-src="./img/up.png"></button>
+      <div class="col col-33"></div>
+  </div>
+
+  <div class="row">
+
+      <button ng-click="left()" class="button button-dark pulse col col-33"><img class="icon-pulse" ng-src="./img/left.png"></button>
+      <button ng-click="fire()"  class="button button-assertive pulse col col-33"><img class="icon-pulse" ng-src="./img/fire.png"></button>
+      <button ng-click="right()" class="button button-dark pulse col col-33"><img class="icon-pulse" ng-src="./img/right.png"></button>
+  </div>
+
+    <div class="row">
+      <div  class="col col-33"></div>
+      <button ng-click="down()" class="button button-dark pulse col col-33"><img class="icon-pulse"  ng-src="./img/down.png"></button>
+      <div class="col col-33"></div>
+    </div>
+
+    <div class="list">
+
+    <br><br><br><br>
+
+    <div class="item item-input-inset">
+      <label class="item-input-wrapper">
+        <input ng-model="config_data.host_ip" type="text" placeholder="Dirección IP Base:">
+      </label>
+      <button ng-click="connect()" class="button button-small">
+        Aceptar
+      </button>
+
+      <div style="padding:5px;height:30px"><p>|</p></div>
+
+
+      <img ng-src="./img/{{config_data.status}}.png" height="25" width="25" alt="" />
+
+    </div>
+
+  <!--  <pre>
+      {{config_data}}
+    </pre>
+
+  -->
+  
+  </div>
+
+  </ion-content>
+</ion-view>
